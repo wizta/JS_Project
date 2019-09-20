@@ -1,10 +1,10 @@
-package com.wizta.springclinic;
+package com.wizta.springphonebook;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringClinicApplicationTests {
+class HomeControllerTests {
 
 	@Test
 	void contextLoads() {
