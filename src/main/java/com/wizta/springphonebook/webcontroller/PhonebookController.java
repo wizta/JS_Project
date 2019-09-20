@@ -4,8 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.wizta.springphonebook.model.Phonebook;
 import com.wizta.springphonebook.repository.PhonebookRepository;
@@ -30,7 +33,14 @@ public class PhonebookController {
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public String create(Phonebook phonebook) {
 		phonebookRepository.add(phonebook);
-		return "phonebook/created";
+		return "phonebook/create";
 	}
+	
+	/*
+	 * @RequestMapping(value = "/", method = RequestMethod.POST) public String
+	 * redirect(Phonebook phonebook) { phonebookRepository.add(phonebook); return
+	 * "phonebook/create"; }
+	 */
+
 
 }
