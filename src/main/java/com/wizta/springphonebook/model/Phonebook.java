@@ -46,6 +46,14 @@ public class Phonebook {
 		return phoneNum;
 	}
 
+	public String getPhoneNum() {
+		return phoneNum;
+	}
+
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
+	}
+
 	public void setPhonenumber(String phoneNum) {
 		this.phoneNum = phoneNum;
 	}
