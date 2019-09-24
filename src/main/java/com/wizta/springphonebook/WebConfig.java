@@ -16,9 +16,10 @@ public class WebConfig implements WebMvcConfigurer {
 
 	@SuppressWarnings("deprecation")
 	public void addViewControllers(ViewControllerRegistry registry) {
-		// super.addViewControllers(registry);
-		registry.addViewController("/login").setViewName("auth/login");
-		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+		registry.addViewController("/home").setViewName("home");
+		registry.addViewController("/").setViewName("home");
+		//registry.addViewController("/hello").setViewName("hello");
+		registry.addViewController("/login").setViewName("login");
 	}
 
 	public void addInterceptors(InterceptorRegistry registry) {
