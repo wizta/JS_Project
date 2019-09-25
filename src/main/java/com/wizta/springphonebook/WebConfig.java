@@ -16,9 +16,8 @@ public class WebConfig implements WebMvcConfigurer {
 
 	@SuppressWarnings("deprecation")
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/home").setViewName("home");
-		registry.addViewController("/").setViewName("home");
-		//registry.addViewController("/hello").setViewName("hello");
+		// registry.addViewController("/home").setViewName("home");
+		// registry.addViewController("/").setViewName("home");
 		registry.addViewController("/login").setViewName("login");
 	}
 
@@ -27,11 +26,13 @@ public class WebConfig implements WebMvcConfigurer {
 	}
 
 	private static final String[] CLASSPATH_RESOURCE_LOCATIONS = { "classpath:/META-INF/resources/",
-			"classpath:/resources/", "classpath:/static/", "classpath:/public/", "classpath:/images/" };
+			"classpath:/resources/", "classpath:/static/", "classpath:/public/", "classpath:/images/",
+			"classpath:/css/" };
 
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
 		registry.addResourceHandler("/images/**").addResourceLocations("/resources/images/");
+		registry.addResourceHandler("/css**").addResourceLocations("/css/");
 	}
 
 }
