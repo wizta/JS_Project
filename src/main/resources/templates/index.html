@@ -7,6 +7,24 @@
 <body>
 	<h1>Hello N'Mewnich!!</h1>
 	<!--declare on WebConfig.java already-->
-	<img src="/mew.jpg" width="500">
+
+
+	<a href="@{/login}" th:href="@{/logout}"><font size="4"
+		color="blue">Log Out</font></a>
+	<br></br>
+
+	<a href="/phonebook/create" th:href="@{/phonebook/create}"><font
+		size="4" color="blue">Phonebook Create</font></a>
+	<br></br>
+
+	<!--  
+	<a href="javascript: document.logoutForm.submit()" role="menuitem">
+		Logout</a>
+	<form name="logoutForm" th:action="@{/logout}" method="post"
+		th:hidden="true">
+		<input hidden type="submit" value="Sign Out" />
+	</form>
+-->
+	<img src="/mew.jpg" width="650">
 </body>
 </html>
