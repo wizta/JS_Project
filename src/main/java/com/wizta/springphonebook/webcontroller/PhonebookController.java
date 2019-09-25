@@ -27,7 +27,7 @@ public class PhonebookController {
 		return "phonebook/create";
 	}
 
-	@RequestMapping(value = "/create", method = RequestMethod.POST)
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String create(Phonebook phonebook) {
 		phonebookRepository.add(phonebook);
 		return "phonebook/create";
