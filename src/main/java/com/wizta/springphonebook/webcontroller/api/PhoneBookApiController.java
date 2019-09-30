@@ -1,4 +1,4 @@
-package com.wizta.springphonebook.apicontroller;
+package com.wizta.springphonebook.webcontroller.api;
 
 import java.util.List;
 
@@ -32,7 +32,7 @@ public class PhoneBookApiController {
 		return phonebook.getpersonID();
 	}
 
-	@RequestMapping(value = "", method = RequestMethod.GET)
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public List<Phonebook> getAllPhonebooks() {
 		return phonebookRepository.getAll();
 	}
